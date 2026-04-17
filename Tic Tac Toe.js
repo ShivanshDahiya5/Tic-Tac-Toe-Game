@@ -22,34 +22,34 @@ const resetGame = () => {
     enableBoxes();
     msgContainer.classList.add("hide");
 
-// boxes.forEach((box) => {
-//     box.addEventListener("click", () =>{
-//         console.log("box was clicked");
-//         if(turnO){
-//             box.innerText = "O";
-//             turnO = false;
-//         } else{
-//             box.innerText = "X";
-//             turnO = true;
-//         }
-//         box.disabled = true;
+boxes.forEach((box) => {
+    box.addEventListener("click", () =>{
+        console.log("box was clicked");
+        if(turnO){
+            box.innerText = "O";
+            turnO = false;
+        } else{
+            box.innerText = "X";
+            turnO = true;
+        }
+        box.disabled = true;
 
-//         checkwinner();
-//     })
-// });
+        checkwinner();
+    })
+});
 
-// const disableBoxes = () => {
-//     for(let box of boxes) {
-//         box.disabled = true;
-//     }
-// }
+const disableBoxes = () => {
+    for(let box of boxes) {
+        box.disabled = true;
+    }
+}
 
-// const enableBoxes = () => {
-//     for(let box of boxes){
-//         box.disabled = false;
-//         box.innerText = "";
-//     }
-// }
+const enableBoxes = () => {
+    for(let box of boxes){
+        box.disabled = false;
+        box.innerText = "";
+    }
+}
 
 // const showWinner = (winner) => {
 //     msg.innerText = 'Congratulations, Winner is ' + winner;
